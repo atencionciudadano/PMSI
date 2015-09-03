@@ -1,0 +1,10 @@
+C:\Users\Fernando\Downloads\LayerCatastro\Dominio.Core.Entities\bin\Debug\Dominio.Core.Entities.dll
+C:\Users\Fernando\Downloads\LayerCatastro\Dominio.Core.Entities\bin\Debug\Dominio.Core.Entities.pdb
+C:\Users\Fernando\Downloads\LayerCatastro\Dominio.Core.Entities\obj\Debug\Dominio.Core.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Fernando\Downloads\LayerCatastro\Dominio.Core.Entities\obj\Debug\Dominio.Core.Entities.dll
+C:\Users\Fernando\Downloads\LayerCatastro\Dominio.Core.Entities\obj\Debug\Dominio.Core.Entities.pdb
+D:\Desarrollo\GAC\Dominio.Core.Entities\bin\Debug\Dominio.Core.Entities.dll
+D:\Desarrollo\GAC\Dominio.Core.Entities\bin\Debug\Dominio.Core.Entities.pdb
+D:\Desarrollo\GAC\Dominio.Core.Entities\obj\Debug\Dominio.Core.Entities.dll
+D:\Desarrollo\GAC\Dominio.Core.Entities\obj\Debug\Dominio.Core.Entities.pdb
+D:\Desarrollo\GAC\Dominio.Core.Entities\obj\Debug\Dominio.Core.Entities.csprojResolveAssemblyReference.cache

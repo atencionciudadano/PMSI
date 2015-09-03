@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d646c6cb7d0406d9c02450c56b2baf8" Name="Diagrama1" ZoomLevel="93">
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.DEPARTAMENTO" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.DISTRITO" Width="1.5" PointX="5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.PERSONA" Width="1.5" PointX="7.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.PERSONAJURIDICA" Width="1.5" PointX="9.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.PERSONANATURAL" Width="1.5" PointX="9.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.PROVINCIA" Width="1.5" PointX="2.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.QUEJARECLAMO" Width="1.5" PointX="12" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.TIPODOCUMENTOIDENTIDAD" Width="1.5" PointX="5" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK__PROVINCIA__idDep__023D5A04" ManuallyRouted="false" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK__DISTRITO__idProv__0519C6AF" ManuallyRouted="false" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK__PERSONA__idDistr__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK__PERSONA__idTipoD__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK__QUEJARECL__idCiu__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_PERSONAJURIDICA_PERSONA" ManuallyRouted="false" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_PERSONANATURAL_PERSONA" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.AREA" Width="1.5" PointX="5.75" PointY="11.5" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.CARGO" Width="1.5" PointX="0.625" PointY="9.5" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.EMPLEADO" Width="1.5" PointX="2.375" PointY="6.5" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.HOJARESPUESTA" Width="2.625" PointX="12.125" PointY="9.75" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.INFORMETERCERO" Width="2.5" PointX="18.125" PointY="8.25" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.REGISTROEVENTO" Width="1.5" PointX="9.375" PointY="7" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.SOLICITUDTERCERO" Width="1.5" PointX="15.375" PointY="4.75" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.SUGERENCIA" Width="1.5" PointX="5.125" PointY="7.5" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.TERCERO" Width="1.5" PointX="19" PointY="5.125" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_EMPLEADO_AREA" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_EMPLEADO_CARGO_" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_EMPLEADO_PERSONA" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_HOJARESPUESTA_QUEJARECLAMO" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_INFORMETERCERO_SOLICITUDTERCERO" ManuallyRouted="true" >
+          <ConnectorPoint PointX="16.875" PointY="4.8989745155282183" />
+          <ConnectorPoint PointX="17.4215625" PointY="4.8989745155282183" />
+          <ConnectorPoint PointX="17.4215625" PointY="7.5796371343759787" />
+          <ConnectorPoint PointX="18.53125" PointY="7.5796371343759787" />
+          <ConnectorPoint PointX="18.53125" PointY="8.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_SUGERENCIA_PERSONA" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_REGISTROEVENTO_QUEJARECLAMO" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_SOLICITUDTERCERO_QUEJARECLAMO" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_SOLICITUDTERCERO_TERCERO" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_REGISTROEVENTO_IDAREA" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.ESTADOS_QUEJARECLAMO" Width="1.5" PointX="8.5" PointY="12.125" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.ESTADOS_SOLICITUDTERCERO" Width="1.5" PointX="9.93842712134981" PointY="27.037700874282841" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.EVENTO" Width="1.5" PointX="4.5729771650270452" PointY="30.152667983506184" />
+        <EntityTypeShape EntityType="MunicipalidadSanIsidroModel.sysdiagram" Width="1.5" PointX="3.3947827962202872" PointY="9.6062190130381939" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_QUEJARECLAMO_ESTADOS_QUEJARECLAMO" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_SOLICITUDTERCERO_ESTADOS_SOLICITUDTERCERO" />
+        <AssociationConnector Association="MunicipalidadSanIsidroModel.FK_REGISTROEVENTO_EVENTO" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

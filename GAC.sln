@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAC", "GAC\GAC.csproj", "{78DA8DF3-0762-4F31-9FB2-3BA7F6ABC3CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio.Core.Entities", "Dominio.Core.Entities\Dominio.Core.Entities.csproj", "{76CC7FAA-06BB-413E-9446-BDED8A469B72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructura.Data.SQL", "Infraestructura.Data.SQL\Infraestructura.Data.SQL.csproj", "{A9135EC8-F539-456F-A932-0ED8F21D66CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78DA8DF3-0762-4F31-9FB2-3BA7F6ABC3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DA8DF3-0762-4F31-9FB2-3BA7F6ABC3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DA8DF3-0762-4F31-9FB2-3BA7F6ABC3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DA8DF3-0762-4F31-9FB2-3BA7F6ABC3CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76CC7FAA-06BB-413E-9446-BDED8A469B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76CC7FAA-06BB-413E-9446-BDED8A469B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76CC7FAA-06BB-413E-9446-BDED8A469B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76CC7FAA-06BB-413E-9446-BDED8A469B72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9135EC8-F539-456F-A932-0ED8F21D66CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9135EC8-F539-456F-A932-0ED8F21D66CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9135EC8-F539-456F-A932-0ED8F21D66CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9135EC8-F539-456F-A932-0ED8F21D66CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

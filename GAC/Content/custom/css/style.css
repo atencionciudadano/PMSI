@@ -1,0 +1,124 @@
+﻿
+
+/*
+	Alinear Modal al Centro
+	************************
+*/
+
+.modal-vertical-cargando {
+  transform: translate(0, 100%) !important;
+  -ms-transform: translate(0, 100%) !important; /* IE 9 */
+  -webkit-transform: translate(0, 100%) !important; /* Safari and Chrome */
+}
+
+.modal-vertical-centered {
+  transform: translate(0, 50%) !important;
+  -ms-transform: translate(0, 50%) !important; /* IE 9 */
+  -webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
+}
+
+.modal-vertical-top {
+  transform: translate(0, 25%) !important;
+  -ms-transform: translate(0, 25%) !important; /* IE 9 */
+  -webkit-transform: translate(0, 25%) !important; /* Safari and Chrome */
+}
+
+.modal-vertical-bottom {
+  transform: translate(0, 75%) !important;
+  -ms-transform: translate(0, 75%) !important; /* IE 9 */
+  -webkit-transform: translate(0, 75%) !important; /* Safari and Chrome */
+}
+
+
+/*
+	Cambiar Color al Modal
+	************************
+*/
+
+.modal-header-primary {
+	color:#ffffff;
+    padding:9px 15px;
+    border-bottom:1px solid #00784B;
+    background-color: #00784B;
+	font-size:12px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+
+
+/*
+	Cambiar el tamaño de letra a la grilla
+	***************************************
+*/
+
+
+.k-grid {
+    font-size: 11px !Important;
+}
+.k-grid td {
+    line-height: 2em;
+	font-size: 11px;
+}
+
+.k-grid th {
+    line-height: 2em;
+	font-size: 11px;
+}
+
+p:first-letter { text-transform: uppercase; }
+
+.form-control{
+
+    font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+/*
+	Quitar porcentaje al upload file
+	*********************************
+*/
+
+.k-upload-pct
+{
+    visibility:hidden;
+    display:none;
+}
+
+
+
+/*
+	Cambiar el color de las filas observadas
+	*****************************************
+*/
+.observado_row
+{
+	background-color:#FFCBCB;
+
+}
+
+
+/*
+	Cambiar el color de las filas detalle - consumos
+	*************************************************
+*/
+.consumos_row
+{
+	background-color:#DFF0D8;
+
+}
+
+
+/*
+	Cambiar el color del Footer Grilla
+	*************************************************
+*/
+.tr.k-footer-plantilla td
+{
+	background-color:#f00;
+
+}

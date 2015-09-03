@@ -1,0 +1,126 @@
+﻿
+/*clase grid*/
+.grid input
+{
+	background-color: white;
+	border: 0 none;
+    box-shadow: none;
+	color: #696969;
+	float:left;
+	font-size: 1em;
+	height:17px;
+	padding: 0px 0 0 8px;
+	margin: 0px;
+	width:auto;
+}
+.grid select 
+{
+	border: 0 none;
+	color: #696969;
+	text-decoration:none;
+	font-size: 0.8em;
+	font-weight: bold;
+	height:17px;
+	margin: 0px  0 0 0px;
+    box-shadow: none;
+	padding: 0px 0 0 8px;
+	float:left;
+	background-color: transparent;
+	width:auto;
+}
+.grid input[type="text"], .grid select{
+	width: auto;
+}
+.grid
+{
+	margin: 0 auto 0 auto;
+	width:90%;
+}
+/*Estilos de cabecera*/
+.grid th
+{
+	background-color: #5C8AC5;
+	color: #FFFDFD;
+	font-family: Tahoma ;
+	font-weight: bold;
+	font-size: 0.7em;
+	padding: 4px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 2px solid #FFFDFD;
+}
+.grid td
+{
+    color: #696969;
+	font-size: 0.7em;
+	padding: 4px 10px;
+	text-align: left;
+}
+/*Colorea los impares*/
+.grid tr:nth-child(even)
+{
+	background: #E3E3E3;
+}
+/*Colorea los pares*/
+.grid tr:nth-child(odd)
+{
+	background: #FFF;
+}
+/*Colorea los impares*/
+.grid tr:nth-child(even) select, .grid tr:nth-child(even) input
+{
+	border:1px solid #FFFFFF;
+	background-color:#E3E3E3;
+}
+/*Colorea los pares*/
+.grid tr:nth-child(odd) select, .grid tr:nth-child(odd) input
+{
+	border:1px solid #E3E3E3;
+}
+.grid td p
+{
+	font-size: 0.9em;
+	text-align: left;
+	font-weight: normal;
+	color:#696969;
+}
+/*link de rows menos del ultimo que es el pie de tabla*/
+.grid td a:not[last-child]
+{
+	background: no-repeat url("../../Images/image/modificar_icon_form1.png") 0 0;
+	float: left;
+	height: 20px;
+	overflow: hidden;
+	width: 20px;
+}
+
+/*inicio para efecto de border survos en rows */
+.grid td:first-child
+{
+	border-radius: 0.4em 0 0 0.4em;
+}
+.grid td:last-child
+{
+	border-radius: 0 0.4em 0.4em 0;
+}
+.grid th:first-child
+{
+	border-radius: 0.4em 0 0 0.4em;
+}
+.grid th:last-child
+{
+	border-radius: 0 0.4em 0.4em 0;
+}
+/*fin para efecto de border survos en rows */
+
+.grid tr:hover
+{
+	background-color: #e0eff5;
+}
+.grid tr:hover select ,.grid tr:hover input
+{
+	background-color: #fff;
+	border:1px solid #E3E3E3;
+}
+
+

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MunicipalidadSanIsidroModelStoreContainer" CdmEntityContainer="MunicipalidadSanIsidroEntities_New">
+    <EntitySetMapping Name="DEPARTAMENTOes">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.DEPARTAMENTO">
+        <MappingFragment StoreEntitySet="DEPARTAMENTO">
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRITOes">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.DISTRITO">
+        <MappingFragment StoreEntitySet="DISTRITO">
+          <ScalarProperty Name="idDistrito" ColumnName="idDistrito" />
+          <ScalarProperty Name="idProvincia" ColumnName="idProvincia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAs">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.PERSONA">
+        <MappingFragment StoreEntitySet="PERSONA">
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="idDistrito" ColumnName="idDistrito" />
+          <ScalarProperty Name="idTipoDocIdentidad" ColumnName="idTipoDocIdentidad" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAJURIDICAs">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.PERSONAJURIDICA">
+        <MappingFragment StoreEntitySet="PERSONAJURIDICA">
+          <ScalarProperty Name="idPersonaJuridica" ColumnName="idPersonaJuridica" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="RUC" ColumnName="RUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONANATURALs">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.PERSONANATURAL">
+        <MappingFragment StoreEntitySet="PERSONANATURAL">
+          <ScalarProperty Name="idPersonaNatural" ColumnName="idPersonaNatural" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="NroDocIdentidad" ColumnName="NroDocIdentidad" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCIAs">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.PROVINCIA">
+        <MappingFragment StoreEntitySet="PROVINCIA">
+          <ScalarProperty Name="idProvincia" ColumnName="idProvincia" />
+          <ScalarProperty Name="idDepartamento" ColumnName="idDepartamento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUEJARECLAMOes">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.QUEJARECLAMO">
+        <MappingFragment StoreEntitySet="QUEJARECLAMO">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="idEstadoQuejaReclamo" ColumnName="idEstadoQuejaReclamo" />
+          <ScalarProperty Name="idQuejaReclamo" ColumnName="idQuejaReclamo" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="NroRegistro" ColumnName="NroRegistro" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ArchivoAdjunto" ColumnName="ArchivoAdjunto" />
+          <ScalarProperty Name="UsrRegistro" ColumnName="UsrRegistro" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPODOCUMENTOIDENTIDADs">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.TIPODOCUMENTOIDENTIDAD">
+        <MappingFragment StoreEntitySet="TIPODOCUMENTOIDENTIDAD">
+          <ScalarProperty Name="idTipoDocIdentidad" ColumnName="idTipoDocIdentidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="MunicipalidadSanIsidroModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="MunicipalidadSanIsidroModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="MunicipalidadSanIsidroModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="MunicipalidadSanIsidroModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MunicipalidadSanIsidroModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="MunicipalidadSanIsidroModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MunicipalidadSanIsidroModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="MunicipalidadSanIsidroModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="MunicipalidadSanIsidroModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SPI_RegistrarQuejaReclamo" FunctionName="MunicipalidadSanIsidroModel.Store.SPI_RegistrarQuejaReclamo" />
+    <EntitySetMapping Name="AREA">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.AREA">
+        <MappingFragment StoreEntitySet="AREA">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="descArea" ColumnName="descArea" />
+          <ScalarProperty Name="idArea" ColumnName="idArea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CARGO">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.CARGO">
+        <MappingFragment StoreEntitySet="CARGO">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="descCargo" ColumnName="descCargo" />
+          <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADO">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="CodigoEmpleado" ColumnName="CodigoEmpleado" />
+          <ScalarProperty Name="idArea" ColumnName="idArea" />
+          <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGISTROEVENTO">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.REGISTROEVENTO">
+        <MappingFragment StoreEntitySet="REGISTROEVENTO">
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="idQuejaReclamo" ColumnName="idQuejaReclamo" />
+          <ScalarProperty Name="idArea" ColumnName="idArea" />
+          <ScalarProperty Name="idRegistroEvento" ColumnName="idRegistroEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOLICITUDTERCERO">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.SOLICITUDTERCERO">
+        <MappingFragment StoreEntitySet="SOLICITUDTERCERO">
+          <ScalarProperty Name="idEstadoSolicitudTercero" ColumnName="idEstadoSolicitudTercero" />
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="DescSolicitud" ColumnName="DescSolicitud" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="idTercero" ColumnName="idTercero" />
+          <ScalarProperty Name="idQuejaReclamo" ColumnName="idQuejaReclamo" />
+          <ScalarProperty Name="idSolicitudTercero" ColumnName="idSolicitudTercero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUGERENCIA">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.SUGERENCIA">
+        <MappingFragment StoreEntitySet="SUGERENCIA">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="EstadoNotificacion" ColumnName="EstadoNotificacion" />
+          <ScalarProperty Name="ArchivoAdjunto" ColumnName="ArchivoAdjunto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Asunto" ColumnName="Asunto" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="NroSugerencia" ColumnName="NroSugerencia" />
+          <ScalarProperty Name="idPersona" ColumnName="idPersona" />
+          <ScalarProperty Name="idSugerencia" ColumnName="idSugerencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TERCERO">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.TERCERO">
+        <MappingFragment StoreEntitySet="TERCERO">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="DireccionFiscal" ColumnName="DireccionFiscal" />
+          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="idTercero" ColumnName="idTercero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOS_QUEJARECLAMO">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.ESTADOS_QUEJARECLAMO">
+        <MappingFragment StoreEntitySet="ESTADOS_QUEJARECLAMO">
+          <ScalarProperty Name="DescEstado" ColumnName="DescEstado" />
+          <ScalarProperty Name="idEstadoQuejaReclamo" ColumnName="idEstadoQuejaReclamo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOS_SOLICITUDTERCERO">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.ESTADOS_SOLICITUDTERCERO">
+        <MappingFragment StoreEntitySet="ESTADOS_SOLICITUDTERCERO">
+          <ScalarProperty Name="DescEstado" ColumnName="DescEstado" />
+          <ScalarProperty Name="idEstadoSolicitudTercero" ColumnName="idEstadoSolicitudTercero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVENTOes">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.EVENTO">
+        <MappingFragment StoreEntitySet="EVENTO">
+          <ScalarProperty Name="DescEvento" ColumnName="DescEvento" />
+          <ScalarProperty Name="idEvento" ColumnName="idEvento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MunicipalidadSanIsidroModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SPI_RegistroAtencion" FunctionName="MunicipalidadSanIsidroModel.Store.SPI_RegistroAtencion" />
+    <EntitySetMapping Name="HOJARESPUESTA">
+      <EntityTypeMapping TypeName="IsTypeOf(MunicipalidadSanIsidroModel.HOJARESPUESTA)">
+        <MappingFragment StoreEntitySet="HOJARESPUESTA">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="NroRegistro" ColumnName="NroRegistro" />
+          <ScalarProperty Name="idQuejaReclamo" ColumnName="idQuejaReclamo" />
+          <ScalarProperty Name="idHojaRespuesta" ColumnName="idHojaRespuesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INFORMETERCERO">
+      <EntityTypeMapping TypeName="IsTypeOf(MunicipalidadSanIsidroModel.INFORMETERCERO)">
+        <MappingFragment StoreEntitySet="INFORMETERCERO">
+          <ScalarProperty Name="FecModifica" ColumnName="FecModifica" />
+          <ScalarProperty Name="UsrModifica" ColumnName="UsrModifica" />
+          <ScalarProperty Name="FecRegistra" ColumnName="FecRegistra" />
+          <ScalarProperty Name="UsrRegistra" ColumnName="UsrRegistra" />
+          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="idSolicitudTercero" ColumnName="idSolicitudTercero" />
+          <ScalarProperty Name="idintormeTercero" ColumnName="idintormeTercero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9135EC8-F539-456F-A932-0ED8F21D66CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infraestructura.Data.SQL</RootNamespace>
+    <AssemblyName>Infraestructura.Data.SQL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AREA.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AtencionCiudadano.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtencionCiudadano.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AtencionCiudadano.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AtencionCiudadano.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AtencionCiudadano.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CARGO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTAMENTO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DISTRITO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLEADO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADOS_QUEJARECLAMO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESTADOS_SOLICITUDTERCERO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EVENTO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOJARESPUESTA.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="INFORMETERCERO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSONA.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSONAJURIDICA.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PERSONANATURAL.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROVINCIA.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QUEJARECLAMO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Reclamo_DAL.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REGISTROEVENTO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SOLICITUDTERCERO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SUGERENCIA.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TERCERO.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TIPODOCUMENTOIDENTIDAD.cs">
+      <DependentUpon>AtencionCiudadano.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dominio.Core.Entities\Dominio.Core.Entities.csproj">
+      <Project>{76cc7faa-06bb-413e-9446-bded8a469b72}</Project>
+      <Name>Dominio.Core.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="AtencionCiudadano.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AtencionCiudadano.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AtencionCiudadano.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AtencionCiudadano.edmx</DependentUpon>
+      <LastGenOutput>AtencionCiudadano.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AtencionCiudadano.edmx.diagram">
+      <DependentUpon>AtencionCiudadano.edmx</DependentUpon>
+    </None>
+    <None Include="AtencionCiudadano.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AtencionCiudadano.edmx</DependentUpon>
+      <LastGenOutput>AtencionCiudadano.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

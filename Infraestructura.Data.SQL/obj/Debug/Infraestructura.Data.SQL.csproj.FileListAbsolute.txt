@@ -1,0 +1,17 @@
+C:\Users\Fernando\Downloads\LayerCatastro\LayerCatastro\Infraestructura.Data.SQL\bin\Debug\Infraestructura.Data.SQL.dll
+C:\Users\Fernando\Downloads\LayerCatastro\LayerCatastro\Infraestructura.Data.SQL\bin\Debug\Infraestructura.Data.SQL.pdb
+C:\Users\Fernando\Downloads\LayerCatastro\LayerCatastro\Infraestructura.Data.SQL\obj\Debug\Infraestructura.Data.SQL.csprojResolveAssemblyReference.cache
+C:\Users\Fernando\Downloads\LayerCatastro\LayerCatastro\Infraestructura.Data.SQL\obj\Debug\Infraestructura.Data.SQL.dll
+C:\Users\Fernando\Downloads\LayerCatastro\LayerCatastro\Infraestructura.Data.SQL\obj\Debug\Infraestructura.Data.SQL.pdb
+C:\Users\Fernando\Downloads\LayerCatastro\LayerCatastro\Infraestructura.Data.SQL\bin\Debug\Dominio.Core.Entities.dll
+C:\Users\Fernando\Downloads\LayerCatastro\LayerCatastro\Infraestructura.Data.SQL\bin\Debug\Dominio.Core.Entities.pdb
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\bin\Debug\Infraestructura.Data.SQL.dll.config
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\bin\Debug\Infraestructura.Data.SQL.dll
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\bin\Debug\Infraestructura.Data.SQL.pdb
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\bin\Debug\Dominio.Core.Entities.dll
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\bin\Debug\EntityFramework.dll
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\bin\Debug\Dominio.Core.Entities.pdb
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\bin\Debug\EntityFramework.xml
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\obj\Debug\Infraestructura.Data.SQL.csprojResolveAssemblyReference.cache
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\obj\Debug\Infraestructura.Data.SQL.dll
+D:\Desarrollo\GAC\Infraestructura.Data.SQL\obj\Debug\Infraestructura.Data.SQL.pdb

@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MunicipalidadSanIsidroModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MunicipalidadSanIsidroModelStoreContainer">
+    <EntitySet Name="AREA" EntityType="MunicipalidadSanIsidroModel.Store.AREA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CARGO" EntityType="MunicipalidadSanIsidroModel.Store.CARGO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEPARTAMENTO" EntityType="MunicipalidadSanIsidroModel.Store.DEPARTAMENTO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DISTRITO" EntityType="MunicipalidadSanIsidroModel.Store.DISTRITO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EMPLEADO" EntityType="MunicipalidadSanIsidroModel.Store.EMPLEADO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ESTADOS_QUEJARECLAMO" EntityType="MunicipalidadSanIsidroModel.Store.ESTADOS_QUEJARECLAMO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ESTADOS_SOLICITUDTERCERO" EntityType="MunicipalidadSanIsidroModel.Store.ESTADOS_SOLICITUDTERCERO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EVENTO" EntityType="MunicipalidadSanIsidroModel.Store.EVENTO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HOJARESPUESTA" EntityType="MunicipalidadSanIsidroModel.Store.HOJARESPUESTA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INFORMETERCERO" EntityType="MunicipalidadSanIsidroModel.Store.INFORMETERCERO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PERSONA" EntityType="MunicipalidadSanIsidroModel.Store.PERSONA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PERSONAJURIDICA" EntityType="MunicipalidadSanIsidroModel.Store.PERSONAJURIDICA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PERSONANATURAL" EntityType="MunicipalidadSanIsidroModel.Store.PERSONANATURAL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PROVINCIA" EntityType="MunicipalidadSanIsidroModel.Store.PROVINCIA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="QUEJARECLAMO" EntityType="MunicipalidadSanIsidroModel.Store.QUEJARECLAMO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="REGISTROEVENTO" EntityType="MunicipalidadSanIsidroModel.Store.REGISTROEVENTO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SOLICITUDTERCERO" EntityType="MunicipalidadSanIsidroModel.Store.SOLICITUDTERCERO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SUGERENCIA" EntityType="MunicipalidadSanIsidroModel.Store.SUGERENCIA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="MunicipalidadSanIsidroModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TERCERO" EntityType="MunicipalidadSanIsidroModel.Store.TERCERO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TIPODOCUMENTOIDENTIDAD" EntityType="MunicipalidadSanIsidroModel.Store.TIPODOCUMENTOIDENTIDAD" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__DISTRITO__idProv__0519C6AF" Association="MunicipalidadSanIsidroModel.Store.FK__DISTRITO__idProv__0519C6AF">
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+      <End Role="DISTRITO" EntitySet="DISTRITO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PERSONA__idDistr__1BFD2C07" Association="MunicipalidadSanIsidroModel.Store.FK__PERSONA__idDistr__1BFD2C07">
+      <End Role="DISTRITO" EntitySet="DISTRITO" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PERSONA__idTipoD__1CF15040" Association="MunicipalidadSanIsidroModel.Store.FK__PERSONA__idTipoD__1CF15040">
+      <End Role="TIPODOCUMENTOIDENTIDAD" EntitySet="TIPODOCUMENTOIDENTIDAD" />
+      <End Role="PERSONA" EntitySet="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PROVINCIA__idDep__023D5A04" Association="MunicipalidadSanIsidroModel.Store.FK__PROVINCIA__idDep__023D5A04">
+      <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QUEJARECL__idCiu__1920BF5C" Association="MunicipalidadSanIsidroModel.Store.FK__QUEJARECL__idCiu__1920BF5C">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="QUEJARECLAMO" EntitySet="QUEJARECLAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLEADO_AREA" Association="MunicipalidadSanIsidroModel.Store.FK_EMPLEADO_AREA">
+      <End Role="AREA" EntitySet="AREA" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLEADO_CARGO}" Association="MunicipalidadSanIsidroModel.Store.FK_EMPLEADO_CARGO}">
+      <End Role="CARGO" EntitySet="CARGO" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EMPLEADO_PERSONA" Association="MunicipalidadSanIsidroModel.Store.FK_EMPLEADO_PERSONA">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOJARESPUESTA_QUEJARECLAMO" Association="MunicipalidadSanIsidroModel.Store.FK_HOJARESPUESTA_QUEJARECLAMO">
+      <End Role="QUEJARECLAMO" EntitySet="QUEJARECLAMO" />
+      <End Role="HOJARESPUESTA" EntitySet="HOJARESPUESTA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMETERCERO_SOLICITUDTERCERO" Association="MunicipalidadSanIsidroModel.Store.FK_INFORMETERCERO_SOLICITUDTERCERO">
+      <End Role="SOLICITUDTERCERO" EntitySet="SOLICITUDTERCERO" />
+      <End Role="INFORMETERCERO" EntitySet="INFORMETERCERO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONAJURIDICA_PERSONA" Association="MunicipalidadSanIsidroModel.Store.FK_PERSONAJURIDICA_PERSONA">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="PERSONAJURIDICA" EntitySet="PERSONAJURIDICA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONANATURAL_PERSONA" Association="MunicipalidadSanIsidroModel.Store.FK_PERSONANATURAL_PERSONA">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="PERSONANATURAL" EntitySet="PERSONANATURAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUEJARECLAMO_ESTADOS_QUEJARECLAMO" Association="MunicipalidadSanIsidroModel.Store.FK_QUEJARECLAMO_ESTADOS_QUEJARECLAMO">
+      <End Role="ESTADOS_QUEJARECLAMO" EntitySet="ESTADOS_QUEJARECLAMO" />
+      <End Role="QUEJARECLAMO" EntitySet="QUEJARECLAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTROEVENTO_AREA" Association="MunicipalidadSanIsidroModel.Store.FK_REGISTROEVENTO_AREA">
+      <End Role="AREA" EntitySet="AREA" />
+      <End Role="REGISTROEVENTO" EntitySet="REGISTROEVENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTROEVENTO_EVENTO" Association="MunicipalidadSanIsidroModel.Store.FK_REGISTROEVENTO_EVENTO">
+      <End Role="EVENTO" EntitySet="EVENTO" />
+      <End Role="REGISTROEVENTO" EntitySet="REGISTROEVENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REGISTROEVENTO_QUEJARECLAMO" Association="MunicipalidadSanIsidroModel.Store.FK_REGISTROEVENTO_QUEJARECLAMO">
+      <End Role="QUEJARECLAMO" EntitySet="QUEJARECLAMO" />
+      <End Role="REGISTROEVENTO" EntitySet="REGISTROEVENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOLICITUDTERCERO_ESTADOS_SOLICITUDTERCERO" Association="MunicipalidadSanIsidroModel.Store.FK_SOLICITUDTERCERO_ESTADOS_SOLICITUDTERCERO">
+      <End Role="ESTADOS_SOLICITUDTERCERO" EntitySet="ESTADOS_SOLICITUDTERCERO" />
+      <End Role="SOLICITUDTERCERO" EntitySet="SOLICITUDTERCERO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOLICITUDTERCERO_QUEJARECLAMO" Association="MunicipalidadSanIsidroModel.Store.FK_SOLICITUDTERCERO_QUEJARECLAMO">
+      <End Role="QUEJARECLAMO" EntitySet="QUEJARECLAMO" />
+      <End Role="SOLICITUDTERCERO" EntitySet="SOLICITUDTERCERO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOLICITUDTERCERO_TERCERO" Association="MunicipalidadSanIsidroModel.Store.FK_SOLICITUDTERCERO_TERCERO">
+      <End Role="TERCERO" EntitySet="TERCERO" />
+      <End Role="SOLICITUDTERCERO" EntitySet="SOLICITUDTERCERO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUGERENCIA_PERSONA" Association="MunicipalidadSanIsidroModel.Store.FK_SUGERENCIA_PERSONA">
+      <End Role="PERSONA" EntitySet="PERSONA" />
+      <End Role="SUGERENCIA" EntitySet="SUGERENCIA" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AREA">
+    <Key>
+      <PropertyRef Name="idArea" />
+    </Key>
+    <Property Name="idArea" Type="int" Nullable="false" />
+    <Property Name="descArea" Type="varchar" MaxLength="100" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CARGO">
+    <Key>
+      <PropertyRef Name="idCargo" />
+    </Key>
+    <Property Name="idCargo" Type="int" Nullable="false" />
+    <Property Name="descCargo" Type="varchar" MaxLength="100" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DEPARTAMENTO">
+    <Key>
+      <PropertyRef Name="idDepartamento" />
+    </Key>
+    <Property Name="idDepartamento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DISTRITO">
+    <Key>
+      <PropertyRef Name="idDistrito" />
+    </Key>
+    <Property Name="idDistrito" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idProvincia" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="idEmpleado" />
+    </Key>
+    <Property Name="idEmpleado" Type="int" Nullable="false" />
+    <Property Name="idPersona" Type="int" />
+    <Property Name="idCargo" Type="int" />
+    <Property Name="idArea" Type="int" />
+    <Property Name="CodigoEmpleado" Type="varchar" MaxLength="200" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ESTADOS_QUEJARECLAMO">
+    <Key>
+      <PropertyRef Name="idEstadoQuejaReclamo" />
+    </Key>
+    <Property Name="idEstadoQuejaReclamo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescEstado" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ESTADOS_SOLICITUDTERCERO">
+    <Key>
+      <PropertyRef Name="idEstadoSolicitudTercero" />
+    </Key>
+    <Property Name="idEstadoSolicitudTercero" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescEstado" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EVENTO">
+    <Key>
+      <PropertyRef Name="idEvento" />
+    </Key>
+    <Property Name="idEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DescEvento" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HOJARESPUESTA">
+    <Key>
+      <PropertyRef Name="idHojaRespuesta" />
+    </Key>
+    <Property Name="idHojaRespuesta" Type="int" Nullable="false" />
+    <Property Name="idQuejaReclamo" Type="int" />
+    <Property Name="NroRegistro" Type="varchar" MaxLength="50" />
+    <Property Name="FechaIngreso" Type="datetime" />
+    <Property Name="Hora" Type="varchar" MaxLength="10" />
+    <Property Name="Respuesta" Type="varchar" MaxLength="300" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="INFORMETERCERO">
+    <Key>
+      <PropertyRef Name="idintormeTercero" />
+    </Key>
+    <Property Name="idintormeTercero" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="idSolicitudTercero" Type="int" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Hora" Type="varchar" MaxLength="10" />
+    <Property Name="Respuesta" Type="varchar" MaxLength="300" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="idPersona" />
+    </Key>
+    <Property Name="idPersona" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idDistrito" Type="int" />
+    <Property Name="idTipoDocIdentidad" Type="int" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="Correo" Type="varchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="PERSONAJURIDICA">
+    <Key>
+      <PropertyRef Name="idPersonaJuridica" />
+    </Key>
+    <Property Name="idPersonaJuridica" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPersona" Type="int" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="RUC" Type="char" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="PERSONANATURAL">
+    <Key>
+      <PropertyRef Name="idPersonaNatural" />
+    </Key>
+    <Property Name="idPersonaNatural" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPersona" Type="int" />
+    <Property Name="NroDocIdentidad" Type="char" MaxLength="15" />
+    <Property Name="Nombres" Type="nchar" MaxLength="10" />
+    <Property Name="ApellidoPaterno" Type="nchar" MaxLength="10" />
+    <Property Name="ApellidoMaterno" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="PROVINCIA">
+    <Key>
+      <PropertyRef Name="idProvincia" />
+    </Key>
+    <Property Name="idProvincia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="QUEJARECLAMO">
+    <Key>
+      <PropertyRef Name="idQuejaReclamo" />
+    </Key>
+    <Property Name="idQuejaReclamo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idPersona" Type="int" />
+    <Property Name="NroRegistro" Type="varchar" MaxLength="50" />
+    <Property Name="FechaIngreso" Type="datetime" />
+    <Property Name="Hora" Type="varchar" MaxLength="10" />
+    <Property Name="Asunto" Type="varchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="ArchivoAdjunto" Type="varchar" MaxLength="100" />
+    <Property Name="idEstadoQuejaReclamo" Type="int" />
+    <Property Name="UsrRegistro" Type="int" />
+    <Property Name="FechaRegistro" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REGISTROEVENTO">
+    <Key>
+      <PropertyRef Name="idRegistroEvento" />
+    </Key>
+    <Property Name="idRegistroEvento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idArea" Type="int" />
+    <Property Name="idQuejaReclamo" Type="int" />
+    <Property Name="idEvento" Type="int" />
+    <Property Name="Observacion" Type="varchar" MaxLength="100" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SOLICITUDTERCERO">
+    <Key>
+      <PropertyRef Name="idSolicitudTercero" />
+    </Key>
+    <Property Name="idSolicitudTercero" Type="int" Nullable="false" />
+    <Property Name="idQuejaReclamo" Type="int" />
+    <Property Name="idTercero" Type="int" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="DescSolicitud" Type="varchar" MaxLength="300" />
+    <Property Name="idEstadoSolicitudTercero" Type="int" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SUGERENCIA">
+    <Key>
+      <PropertyRef Name="idSugerencia" />
+    </Key>
+    <Property Name="idSugerencia" Type="int" Nullable="false" />
+    <Property Name="idPersona" Type="int" />
+    <Property Name="NroSugerencia" Type="varchar" MaxLength="50" />
+    <Property Name="FechaIngreso" Type="datetime" />
+    <Property Name="Hora" Type="varchar" MaxLength="10" />
+    <Property Name="Asunto" Type="varchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="1000" />
+    <Property Name="ArchivoAdjunto" Type="varchar" MaxLength="100" />
+    <Property Name="EstadoNotificacion" Type="int" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TERCERO">
+    <Key>
+      <PropertyRef Name="idTercero" />
+    </Key>
+    <Property Name="idTercero" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="100" />
+    <Property Name="Ruc" Type="varchar" MaxLength="20" />
+    <Property Name="DireccionFiscal" Type="varchar" MaxLength="200" />
+    <Property Name="UsrRegistra" Type="int" />
+    <Property Name="FecRegistra" Type="datetime" />
+    <Property Name="UsrModifica" Type="int" />
+    <Property Name="FecModifica" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TIPODOCUMENTOIDENTIDAD">
+    <Key>
+      <PropertyRef Name="idTipoDocIdentidad" />
+    </Key>
+    <Property Name="idTipoDocIdentidad" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__DISTRITO__idProv__0519C6AF">
+    <End Role="PROVINCIA" Type="MunicipalidadSanIsidroModel.Store.PROVINCIA" Multiplicity="1" />
+    <End Role="DISTRITO" Type="MunicipalidadSanIsidroModel.Store.DISTRITO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCIA">
+        <PropertyRef Name="idProvincia" />
+      </Principal>
+      <Dependent Role="DISTRITO">
+        <PropertyRef Name="idProvincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PERSONA__idDistr__1BFD2C07">
+    <End Role="DISTRITO" Type="MunicipalidadSanIsidroModel.Store.DISTRITO" Multiplicity="0..1" />
+    <End Role="PERSONA" Type="MunicipalidadSanIsidroModel.Store.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRITO">
+        <PropertyRef Name="idDistrito" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="idDistrito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PERSONA__idTipoD__1CF15040">
+    <End Role="TIPODOCUMENTOIDENTIDAD" Type="MunicipalidadSanIsidroModel.Store.TIPODOCUMENTOIDENTIDAD" Multiplicity="0..1" />
+    <End Role="PERSONA" Type="MunicipalidadSanIsidroModel.Store.PERSONA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPODOCUMENTOIDENTIDAD">
+        <PropertyRef Name="idTipoDocIdentidad" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="idTipoDocIdentidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PROVINCIA__idDep__023D5A04">
+    <End Role="DEPARTAMENTO" Type="MunicipalidadSanIsidroModel.Store.DEPARTAMENTO" Multiplicity="1" />
+    <End Role="PROVINCIA" Type="MunicipalidadSanIsidroModel.Store.PROVINCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTAMENTO">
+        <PropertyRef Name="idDepartamento" />
+      </Principal>
+      <Dependent Role="PROVINCIA">
+        <PropertyRef Name="idDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QUEJARECL__idCiu__1920BF5C">
+    <End Role="PERSONA" Type="MunicipalidadSanIsidroModel.Store.PERSONA" Multiplicity="0..1" />
+    <End Role="QUEJARECLAMO" Type="MunicipalidadSanIsidroModel.Store.QUEJARECLAMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="QUEJARECLAMO">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLEADO_AREA">
+    <End Role="AREA" Type="MunicipalidadSanIsidroModel.Store.AREA" Multiplicity="0..1" />
+    <End Role="EMPLEADO" Type="MunicipalidadSanIsidroModel.Store.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AREA">
+        <PropertyRef Name="idArea" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="idArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLEADO_CARGO}">
+    <End Role="CARGO" Type="MunicipalidadSanIsidroModel.Store.CARGO" Multiplicity="0..1" />
+    <End Role="EMPLEADO" Type="MunicipalidadSanIsidroModel.Store.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARGO">
+        <PropertyRef Name="idCargo" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="idCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EMPLEADO_PERSONA">
+    <End Role="PERSONA" Type="MunicipalidadSanIsidroModel.Store.PERSONA" Multiplicity="0..1" />
+    <End Role="EMPLEADO" Type="MunicipalidadSanIsidroModel.Store.EMPLEADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="EMPLEADO">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOJARESPUESTA_QUEJARECLAMO">
+    <End Role="QUEJARECLAMO" Type="MunicipalidadSanIsidroModel.Store.QUEJARECLAMO" Multiplicity="0..1" />
+    <End Role="HOJARESPUESTA" Type="MunicipalidadSanIsidroModel.Store.HOJARESPUESTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUEJARECLAMO">
+        <PropertyRef Name="idQuejaReclamo" />
+      </Principal>
+      <Dependent Role="HOJARESPUESTA">
+        <PropertyRef Name="idQuejaReclamo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INFORMETERCERO_SOLICITUDTERCERO">
+    <End Role="SOLICITUDTERCERO" Type="MunicipalidadSanIsidroModel.Store.SOLICITUDTERCERO" Multiplicity="0..1" />
+    <End Role="INFORMETERCERO" Type="MunicipalidadSanIsidroModel.Store.INFORMETERCERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOLICITUDTERCERO">
+        <PropertyRef Name="idSolicitudTercero" />
+      </Principal>
+      <Dependent Role="INFORMETERCERO">
+        <PropertyRef Name="idSolicitudTercero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONAJURIDICA_PERSONA">
+    <End Role="PERSONA" Type="MunicipalidadSanIsidroModel.Store.PERSONA" Multiplicity="0..1" />
+    <End Role="PERSONAJURIDICA" Type="MunicipalidadSanIsidroModel.Store.PERSONAJURIDICA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="PERSONAJURIDICA">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONANATURAL_PERSONA">
+    <End Role="PERSONA" Type="MunicipalidadSanIsidroModel.Store.PERSONA" Multiplicity="0..1" />
+    <End Role="PERSONANATURAL" Type="MunicipalidadSanIsidroModel.Store.PERSONANATURAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="PERSONANATURAL">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUEJARECLAMO_ESTADOS_QUEJARECLAMO">
+    <End Role="ESTADOS_QUEJARECLAMO" Type="MunicipalidadSanIsidroModel.Store.ESTADOS_QUEJARECLAMO" Multiplicity="0..1" />
+    <End Role="QUEJARECLAMO" Type="MunicipalidadSanIsidroModel.Store.QUEJARECLAMO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOS_QUEJARECLAMO">
+        <PropertyRef Name="idEstadoQuejaReclamo" />
+      </Principal>
+      <Dependent Role="QUEJARECLAMO">
+        <PropertyRef Name="idEstadoQuejaReclamo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTROEVENTO_AREA">
+    <End Role="AREA" Type="MunicipalidadSanIsidroModel.Store.AREA" Multiplicity="0..1" />
+    <End Role="REGISTROEVENTO" Type="MunicipalidadSanIsidroModel.Store.REGISTROEVENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AREA">
+        <PropertyRef Name="idArea" />
+      </Principal>
+      <Dependent Role="REGISTROEVENTO">
+        <PropertyRef Name="idArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTROEVENTO_EVENTO">
+    <End Role="EVENTO" Type="MunicipalidadSanIsidroModel.Store.EVENTO" Multiplicity="0..1" />
+    <End Role="REGISTROEVENTO" Type="MunicipalidadSanIsidroModel.Store.REGISTROEVENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVENTO">
+        <PropertyRef Name="idEvento" />
+      </Principal>
+      <Dependent Role="REGISTROEVENTO">
+        <PropertyRef Name="idEvento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REGISTROEVENTO_QUEJARECLAMO">
+    <End Role="QUEJARECLAMO" Type="MunicipalidadSanIsidroModel.Store.QUEJARECLAMO" Multiplicity="0..1" />
+    <End Role="REGISTROEVENTO" Type="MunicipalidadSanIsidroModel.Store.REGISTROEVENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUEJARECLAMO">
+        <PropertyRef Name="idQuejaReclamo" />
+      </Principal>
+      <Dependent Role="REGISTROEVENTO">
+        <PropertyRef Name="idQuejaReclamo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOLICITUDTERCERO_ESTADOS_SOLICITUDTERCERO">
+    <End Role="ESTADOS_SOLICITUDTERCERO" Type="MunicipalidadSanIsidroModel.Store.ESTADOS_SOLICITUDTERCERO" Multiplicity="0..1" />
+    <End Role="SOLICITUDTERCERO" Type="MunicipalidadSanIsidroModel.Store.SOLICITUDTERCERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOS_SOLICITUDTERCERO">
+        <PropertyRef Name="idEstadoSolicitudTercero" />
+      </Principal>
+      <Dependent Role="SOLICITUDTERCERO">
+        <PropertyRef Name="idEstadoSolicitudTercero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOLICITUDTERCERO_QUEJARECLAMO">
+    <End Role="QUEJARECLAMO" Type="MunicipalidadSanIsidroModel.Store.QUEJARECLAMO" Multiplicity="0..1" />
+    <End Role="SOLICITUDTERCERO" Type="MunicipalidadSanIsidroModel.Store.SOLICITUDTERCERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUEJARECLAMO">
+        <PropertyRef Name="idQuejaReclamo" />
+      </Principal>
+      <Dependent Role="SOLICITUDTERCERO">
+        <PropertyRef Name="idQuejaReclamo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOLICITUDTERCERO_TERCERO">
+    <End Role="TERCERO" Type="MunicipalidadSanIsidroModel.Store.TERCERO" Multiplicity="0..1" />
+    <End Role="SOLICITUDTERCERO" Type="MunicipalidadSanIsidroModel.Store.SOLICITUDTERCERO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TERCERO">
+        <PropertyRef Name="idTercero" />
+      </Principal>
+      <Dependent Role="SOLICITUDTERCERO">
+        <PropertyRef Name="idTercero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUGERENCIA_PERSONA">
+    <End Role="PERSONA" Type="MunicipalidadSanIsidroModel.Store.PERSONA" Multiplicity="0..1" />
+    <End Role="SUGERENCIA" Type="MunicipalidadSanIsidroModel.Store.SUGERENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="idPersona" />
+      </Principal>
+      <Dependent Role="SUGERENCIA">
+        <PropertyRef Name="idPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPI_RegistrarQuejaReclamo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codDistrito" Type="int" Mode="In" />
+    <Parameter Name="codTipoDocumento" Type="int" Mode="In" />
+    <Parameter Name="Nombres" Type="varchar" Mode="In" />
+    <Parameter Name="ApePaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApeMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroDocumento" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Correo" Type="varchar" Mode="In" />
+    <Parameter Name="NroRegistro" Type="varchar" Mode="In" />
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+    <Parameter Name="Hora" Type="varchar" Mode="In" />
+    <Parameter Name="Asunto" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="ArchivoAdjunto" Type="varchar" Mode="In" />
+    <Parameter Name="UsrRegistra" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPI_RegistroAtencion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdQuejaReclamo" Type="int" Mode="In" />
+    <Parameter Name="IdArea" Type="int" Mode="In" />
+    <Parameter Name="IdEstadoQuejaReclamo" Type="int" Mode="In" />
+    <Parameter Name="IdEvento" Type="int" Mode="In" />
+    <Parameter Name="Observacion" Type="varchar" Mode="In" />
+    <Parameter Name="UsrRegistra" Type="int" Mode="In" />
+  </Function>
+</Schema>

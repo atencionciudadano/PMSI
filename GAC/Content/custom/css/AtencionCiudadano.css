@@ -1,0 +1,53 @@
+﻿.labelFormLeft {
+	text-align:right;
+	padding-right: 10px;
+	vertical-align:bottom;
+	height:100%;
+	font-size:13px;
+	font-family:Tahoma;
+}
+.labelFormRight{
+	text-align:left;
+	padding-right: 10px;
+	vertical-align:middle;
+	height:100%;
+	font-size:13px;
+	font-family:Tahoma;
+}
+.comboFormRight {
+	text-align:left;
+	vertical-align:middle;
+	height:100%;
+	font-size:13px;
+	font-family:Tahoma;
+	width:80%;
+}
+.textboxFormRight {
+	text-align:left;
+	vertical-align:middle;
+	height:100%;
+	font-size:13px;
+	font-family:Tahoma;
+	width:80%;
+}
+.tdForm {
+	height:100%;
+	vertical-align:middle;
+	width:25%;
+}
+.textareaFormRight {
+	text-align:left;
+	vertical-align:middle;
+	height:100%;
+	width:100%;
+	font-size:13px;
+	font-family:Tahoma;
+}
+
+.buttonForm {
+	text-align:center;
+}
+
+.NoVisible {
+	visibility:hidden;
+}
